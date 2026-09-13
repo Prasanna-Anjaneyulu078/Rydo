@@ -1,0 +1,55 @@
+.rydo-rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.rydo-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rydo-star-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: var(--color-border-variant);
+  transition: transform 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rydo-star-btn:not(.read-only):hover {
+  transform: scale(1.15);
+}
+
+.rydo-star-btn.filled {
+  color: #f59e0b;
+}
+
+.rydo-star-btn.read-only {
+  cursor: default;
+}
+
+/* Sizes */
+.size-sm .rydo-star-btn span {
+  font-size: 1.1rem;
+}
+
+.size-md .rydo-star-btn span {
+  font-size: 1.6rem;
+}
+
+.size-lg .rydo-star-btn span {
+  font-size: 2.25rem;
+}
+
+.rydo-rating-feedback-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}

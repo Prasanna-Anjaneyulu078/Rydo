@@ -1,0 +1,307 @@
+.rydo-admin-drivers-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-ad-content {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.rydo-ad-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rydo-ad-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rydo-ad-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.rydo-ad-sub {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+.rydo-ad-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rydo-ad-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0 1rem;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 360px;
+  height: 42px;
+}
+
+.rydo-ad-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.rydo-ad-clear-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+}
+
+.rydo-ad-status-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rydo-ad-tab {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.rydo-ad-tab.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.rydo-ad-table-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.rydo-table-row-clickable {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rydo-table-row-clickable:hover {
+  background: var(--color-surface-low);
+}
+
+.rydo-ad-driver-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rydo-ad-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rydo-ad-driver-name-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-ad-driver-name {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-ad-driver-phone {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-ad-veh-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-ad-veh-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-ad-veh-plate {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-ad-rating-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-ad-rating-num {
+  font-weight: 700;
+  color: #d97706;
+}
+
+.rydo-ad-trips-num {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-ad-status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.rydo-ad-status-pill.active {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.rydo-ad-status-pill.suspended {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.rydo-ad-status-pill.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.rydo-ad-compliance-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ai-deep);
+}
+
+.rydo-ad-compliance-tag .material-symbols-outlined {
+  font-size: 0.9375rem;
+}
+
+.rydo-ad-action-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+
+.rydo-ad-action-btn.suspend {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  border-color: rgba(220, 38, 38, 0.2);
+}
+
+.rydo-ad-action-btn.activate {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Modal */
+.rydo-driver-detail-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rydo-dd-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rydo-dd-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rydo-dd-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.rydo-dd-meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dd-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.rydo-dd-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-surface-container);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.rydo-dd-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--color-surface-low);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.rydo-dd-spec-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.rydo-dd-spec-item .label {
+  color: var(--color-text-secondary);
+}
+
+.rydo-dd-spec-item .val {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-dd-spec-item .val.green {
+  color: var(--color-success);
+}

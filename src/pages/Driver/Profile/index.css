@@ -1,0 +1,275 @@
+.rydo-driver-profile-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-dp-content {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.rydo-dp-container {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rydo-dp-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rydo-dp-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rydo-dp-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-ai-deep);
+}
+
+.rydo-dp-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rydo-dp-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rydo-dp-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+}
+
+.rydo-dp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-ai-deep);
+  background: var(--color-ai-container);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-dp-badge .material-symbols-outlined {
+  font-size: 0.9375rem;
+}
+
+.rydo-dp-phone {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dp-rating-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+  margin-top: 0.15rem;
+}
+
+.rydo-dp-rating-meta .star {
+  font-size: 1rem;
+  color: #f59e0b;
+}
+
+.rydo-dp-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Vehicle Box */
+.rydo-dp-vehicle-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface-low);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.rydo-dp-veh-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rydo-dp-veh-icon .material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+.rydo-dp-veh-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rydo-dp-veh-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-dp-veh-type {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dp-veh-plate {
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 800;
+  background: var(--color-surface);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+/* Documents List */
+.rydo-dp-docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.rydo-dp-doc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+}
+
+.rydo-dp-doc-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rydo-dp-doc-icon {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dp-doc-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-dp-doc-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-dp-doc-exp {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dp-doc-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-dp-doc-status-badge .material-symbols-outlined {
+  font-size: 0.9375rem;
+}
+
+/* Banking */
+.rydo-dp-bank-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface-low);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.rydo-dp-bank-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rydo-dp-bank-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rydo-dp-bank-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-dp-bank-num {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-dp-bank-auto {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ai-deep);
+  background: var(--color-ai-container);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-dp-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

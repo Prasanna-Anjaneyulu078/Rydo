@@ -1,0 +1,244 @@
+.rydo-profile-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-profile-content {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.rydo-profile-container {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rydo-profile-card,
+.rydo-profile-section-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rydo-profile-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rydo-profile-avatar-wrap {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+
+.rydo-profile-big-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-primary);
+}
+
+.rydo-avatar-edit-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s;
+}
+
+.rydo-avatar-edit-btn:hover {
+  transform: scale(1.1);
+}
+
+.rydo-avatar-edit-btn .material-symbols-outlined {
+  font-size: 0.9375rem;
+}
+
+.rydo-profile-avatar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rydo-profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+}
+
+.rydo-profile-role {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-profile-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ai-deep);
+  margin-top: 0.2rem;
+}
+
+.rydo-profile-verified .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.rydo-profile-alert-success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.rydo-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rydo-profile-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .rydo-profile-fields-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rydo-profile-save-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rydo-profile-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Saved places */
+.rydo-saved-places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rydo-saved-place-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+}
+
+.rydo-saved-place-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rydo-saved-place-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.rydo-saved-place-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-saved-place-addr {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rydo-saved-place-btn {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Wallet */
+.rydo-wallet-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface-low);
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.rydo-wallet-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-wallet-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rydo-wallet-amount {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-ai-deep);
+}
+
+/* Portal switch */
+.rydo-portal-switch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

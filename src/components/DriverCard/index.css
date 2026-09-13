@@ -1,0 +1,199 @@
+.rydo-driver-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.rydo-driver-card {
+  background: var(--color-surface-container);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rydo-driver-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rydo-driver-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.rydo-driver-avatar-box {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.rydo-driver-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.rydo-driver-verified-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--color-surface);
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.rydo-driver-verified-badge .material-symbols-outlined {
+  font-size: 1rem;
+  color: var(--color-ai-deep);
+}
+
+.rydo-driver-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rydo-driver-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.rydo-driver-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
+}
+
+.rydo-star-icon {
+  font-size: 1rem;
+  color: #f59e0b;
+}
+
+.rydo-rating-val {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-trips-count {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* Safety PIN */
+.rydo-safety-pin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.rydo-pin-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.rydo-pin-box {
+  background: var(--color-inverse-surface);
+  color: var(--color-inverse-text);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.15rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.rydo-pin-code {
+  font-family: monospace;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+/* Vehicle Row */
+.rydo-driver-vehicle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(195, 198, 215, 0.4);
+  padding-top: 0.625rem;
+}
+
+.rydo-vehicle-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-vehicle-name .material-symbols-outlined {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-vehicle-plate {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: var(--color-surface);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+}
+
+/* Driver Actions */
+.rydo-driver-action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* AI Note */
+.rydo-driver-ai-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.65rem 0.875rem;
+  background: var(--color-ai-container);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 107, 95, 0.15);
+}
+
+.rydo-ai-note-icon {
+  font-size: 1.125rem;
+  color: var(--color-ai-deep);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.rydo-ai-note-text {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.rydo-ai-note-text strong {
+  color: var(--color-ai-deep);
+}

@@ -1,0 +1,179 @@
+.rydo-history-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-history-content {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.rydo-history-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rydo-history-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rydo-history-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.rydo-history-sub {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* Filter Bar */
+.rydo-history-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-history-filter-pill {
+  padding: 0.45rem 1.125rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.rydo-history-filter-pill:hover {
+  background: var(--color-surface-container);
+  color: var(--color-text);
+}
+
+.rydo-history-filter-pill.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* List */
+.rydo-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rydo-history-item-wrapper {
+  cursor: pointer;
+}
+
+.rydo-history-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-empty-icon {
+  font-size: 3rem;
+  color: var(--color-text-tertiary);
+}
+
+/* Receipt Modal */
+.rydo-receipt-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rydo-receipt-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.rydo-receipt-id {
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.rydo-receipt-fare-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface-low);
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.rydo-receipt-fare-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-receipt-fare-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.rydo-receipt-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.rydo-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  gap: 1rem;
+}
+
+.rydo-receipt-label {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.rydo-receipt-val {
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: right;
+  word-break: break-word;
+}
+
+.rydo-receipt-val.paid {
+  color: var(--color-success);
+}
+
+.rydo-receipt-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}

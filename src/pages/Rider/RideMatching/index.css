@@ -1,0 +1,209 @@
+.rydo-matching-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-matching-layout {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--header-height);
+  padding: 1.5rem;
+}
+
+.rydo-matching-map-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.rydo-matching-backdrop-mask {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.94) 0%, rgba(240, 243, 250, 0.88) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rydo-matching-center-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 460px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 48px rgba(19, 27, 46, 0.12);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Radar Animation */
+.rydo-radar-circle-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.rydo-radar-wave {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  opacity: 0;
+}
+
+.wave-1 {
+  width: 100px;
+  height: 100px;
+  animation: radarPing 2.4s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.wave-2 {
+  width: 130px;
+  height: 130px;
+  animation: radarPing 2.4s cubic-bezier(0.2, 0.8, 0.4, 1) 0.8s infinite;
+}
+
+.wave-3 {
+  width: 160px;
+  height: 160px;
+  animation: radarPing 2.4s cubic-bezier(0.2, 0.8, 0.4, 1) 1.6s infinite;
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.rydo-radar-core {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  padding: 8px;
+}
+
+.rydo-radar-car-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.rydo-radar-beacon-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-ai-deep);
+  border: 2px solid #ffffff;
+}
+
+/* Headers */
+.rydo-matching-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-ai-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--color-ai-container);
+  color: var(--color-ai-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-ai-tag .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.rydo-matching-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+}
+
+.rydo-matching-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 380px;
+}
+
+/* Telemetry Box */
+.rydo-telemetry-box {
+  width: 100%;
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rydo-telemetry-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.rydo-telemetry-icon {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  animation: spin 3s linear infinite;
+}
+
+.rydo-telemetry-text {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-telemetry-tier {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-matching-actions {
+  width: 100%;
+}

@@ -1,0 +1,442 @@
+.rydo-admin-dashboard-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-admin-content {
+  flex: 1;
+  margin-top: var(--header-height);
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.rydo-admin-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rydo-admin-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rydo-admin-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.rydo-admin-sub {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+.rydo-admin-surge-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.rydo-surge-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-surge-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-surge-stepper button {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-border);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.rydo-surge-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-ai-deep);
+  min-width: 44px;
+  text-align: center;
+}
+
+/* KPI Cards */
+.rydo-admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .rydo-admin-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rydo-admin-kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.rydo-kpi-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rydo-kpi-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rydo-kpi-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rydo-kpi-icon {
+  font-size: 1.25rem;
+  padding: 0.4rem;
+  border-radius: var(--radius-md);
+}
+
+.rydo-kpi-icon.blue {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.rydo-kpi-icon.teal {
+  color: var(--color-ai-deep);
+  background: var(--color-ai-container);
+}
+
+.rydo-kpi-icon.green {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.rydo-kpi-icon.purple {
+  color: #7c3aed;
+  background: #f3e8ff;
+}
+
+.rydo-kpi-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.rydo-kpi-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+}
+
+.rydo-kpi-trend.positive {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.rydo-kpi-meta {
+  color: var(--color-text-tertiary);
+}
+
+/* Split Grid */
+.rydo-admin-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .rydo-admin-split-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.rydo-admin-map-card,
+.rydo-admin-insights-card,
+.rydo-admin-table-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.rydo-admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.rydo-admin-card-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.rydo-admin-card-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-admin-live-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--color-ai-deep);
+  background: var(--color-ai-container);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-admin-live-pulse .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-ai-deep);
+  animation: pulse-beacon 1s infinite;
+}
+
+.rydo-admin-map-box {
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+/* Insights Card */
+.rydo-insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 0.75rem;
+}
+
+.rydo-insight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-surface-low);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.rydo-insight-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.rydo-insight-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rydo-insight-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-insight-val {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-insight-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.rydo-insight-badge.yellow {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.rydo-insight-badge.green {
+  background: var(--color-ai-container);
+  color: var(--color-ai-deep);
+}
+
+.rydo-admin-zones-table {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.rydo-zones-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rydo-zone-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.rydo-zone-row span:first-child {
+  width: 140px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.rydo-zone-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-surface-container);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.rydo-zone-bar span {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Table */
+.rydo-table-responsive {
+  overflow-x: auto;
+}
+
+.rydo-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.8125rem;
+}
+
+.rydo-admin-table th {
+  padding: 0.75rem 1rem;
+  background: var(--color-surface-low);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.rydo-admin-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.rydo-mono-cell {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-table-person {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-table-route {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.rydo-table-point {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.rydo-bold-fare {
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.rydo-tier-chip {
+  background: var(--color-surface-container);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.rydo-status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.rydo-status-pill.completed {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.rydo-status-pill.in_progress {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.rydo-status-pill.matched,
+.rydo-status-pill.requested {
+  background: #fef3c7;
+  color: #b45309;
+}

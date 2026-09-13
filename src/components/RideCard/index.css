@@ -1,0 +1,285 @@
+/* Tier Option Card */
+.rydo-tier-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.rydo-tier-card:hover {
+  background: var(--color-surface-low);
+  border-color: var(--color-border-variant);
+}
+
+.rydo-tier-card.is-selected {
+  background: var(--color-surface-high);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.rydo-tier-left {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 0;
+}
+
+.rydo-tier-img-box {
+  width: 52px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.rydo-tier-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.rydo-tier-fallback-icon {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.rydo-tier-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rydo-tier-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-tier-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.rydo-tier-tag {
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+}
+
+.tag-popular {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.tag-top-rated {
+  background: rgba(109, 245, 225, 0.4);
+  color: var(--color-ai-deep);
+}
+
+.tag-quiet-ev {
+  background: var(--color-surface-variant);
+  color: #003ea8;
+}
+
+.tag-quickest {
+  background: rgba(109, 245, 225, 0.35);
+  color: var(--color-ai-deep);
+}
+
+.rydo-tier-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rydo-tier-seats {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.rydo-tier-seats .material-symbols-outlined {
+  font-size: 0.875rem;
+}
+
+.rydo-tier-eta {
+  color: var(--color-ai-deep);
+  font-weight: 600;
+}
+
+.rydo-tier-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rydo-tier-right {
+  text-align: right;
+  flex-shrink: 0;
+  padding-left: 0.5rem;
+}
+
+.rydo-tier-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.rydo-tier-orig-price {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+/* History Card */
+.rydo-ride-history-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rydo-ride-history-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.rydo-rh-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rydo-rh-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-rh-date {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-rh-id {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  font-family: monospace;
+}
+
+.rydo-rh-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.status-completed {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.status-cancelled {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.rydo-rh-route {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--color-surface-low);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.rydo-rh-route-markers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+
+.rydo-rh-line {
+  width: 2px;
+  height: 24px;
+  background: var(--color-border-variant);
+  margin: 0.25rem 0;
+}
+
+.rydo-rh-route-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.rydo-rh-spot {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-rh-spot-label {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.rydo-rh-spot-val {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-rh-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.625rem;
+}
+
+.rydo-rh-tier-info {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-rh-tier-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-rh-fare {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-text);
+}

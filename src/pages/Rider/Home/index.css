@@ -1,0 +1,430 @@
+.rydo-rider-home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-rider-home-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  margin-top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
+}
+
+/* Left Ride Panel (Desktop) */
+.rydo-ride-panel {
+  display: none;
+  width: 440px;
+  max-width: 480px;
+  height: 100%;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 4px 0 24px rgba(19, 27, 46, 0.05);
+  z-index: 20;
+  overflow-y: auto;
+}
+
+@media (min-width: 900px) {
+  .rydo-ride-panel {
+    display: block;
+  }
+}
+
+.rydo-ride-panel-inner {
+  padding: 1.5rem 1.25rem 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rydo-panel-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.rydo-panel-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.rydo-panel-sub {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* Route Selector Box */
+.rydo-route-selector-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rydo-route-selector-box:hover {
+  background: var(--color-surface-container);
+  border-color: var(--color-primary);
+}
+
+.rydo-route-selector-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.rydo-route-selector-inputs {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 0.35rem;
+}
+
+.rydo-route-spot {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rydo-spot-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.05em;
+}
+
+.rydo-spot-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rydo-route-divider {
+  height: 1px;
+  background: var(--color-border);
+}
+
+.rydo-route-edit-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+
+.rydo-route-edit-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Vehicle Tiers list */
+.rydo-tiers-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rydo-tiers-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.25rem;
+}
+
+.rydo-tiers-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+}
+
+.rydo-tiers-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-ai-deep);
+  background: var(--color-ai-container);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.rydo-tiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Promo strip */
+.rydo-promo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-ai-container);
+  border: 1px solid rgba(0, 107, 95, 0.15);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.875rem;
+}
+
+.rydo-promo-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-promo-icon {
+  font-size: 1.15rem;
+  color: var(--color-ai-deep);
+}
+
+.rydo-promo-text {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.rydo-promo-code {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-ai-deep);
+  letter-spacing: 0.05em;
+}
+
+.rydo-promo-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-promo-toggle {
+  background: none;
+  border: none;
+  color: var(--color-ai-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rydo-promo-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Payment & CTA */
+.rydo-booking-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.rydo-payment-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface-low);
+  padding: 0.6rem 0.875rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rydo-payment-selector:hover {
+  background: var(--color-surface-container);
+}
+
+.rydo-payment-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rydo-payment-icon {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-payment-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-payment-change-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rydo-book-cta-btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0053db 100%);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  font-size: 1.05rem;
+}
+
+/* Right Map Viewport */
+.rydo-map-panel {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+/* Mobile Bottom Sheet & Overlay */
+.rydo-mobile-sheet-wrapper {
+  display: block;
+  position: absolute;
+  bottom: var(--bottom-nav-height);
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+@media (min-width: 900px) {
+  .rydo-mobile-sheet-wrapper {
+    display: none;
+  }
+}
+
+.rydo-mobile-route-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface-low);
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.5rem;
+}
+
+.rydo-mobile-route-text {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rydo-mobile-route-text .material-symbols-outlined {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.rydo-mobile-route-edit {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.rydo-mobile-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.rydo-mobile-booking-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.rydo-mobile-payment-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* Payment Modal List */
+.rydo-payment-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rydo-payment-option-card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.rydo-payment-option-card:hover {
+  background: var(--color-surface-low);
+}
+
+.rydo-payment-option-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-surface-high);
+}
+
+.rydo-payment-opt-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.rydo-payment-opt-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rydo-payment-opt-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.rydo-payment-opt-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.rydo-payment-radio {
+  color: var(--color-primary);
+}

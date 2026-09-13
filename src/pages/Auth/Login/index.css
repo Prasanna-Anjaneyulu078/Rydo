@@ -1,0 +1,258 @@
+/* Rydo Authentication Styling - Plain CSS */
+.rydo-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: 1.5rem 1rem;
+}
+
+.rydo-auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Brand Header */
+.rydo-auth-brand-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rydo-auth-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.rydo-auth-logo {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.rydo-auth-brand-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.rydo-auth-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+
+.rydo-auth-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Alert / Info Banners */
+.rydo-auth-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.65rem 0.875rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.rydo-error-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.rydo-auth-info-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.65rem 0.875rem;
+  border-radius: var(--radius-sm);
+}
+
+.rydo-auth-info-banner .material-symbols-outlined {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+/* Form */
+.rydo-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Meta Row */
+.rydo-auth-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  padding: 0.125rem 0;
+}
+
+.rydo-remember-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8125rem;
+}
+
+.rydo-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rydo-forgot-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.15s ease;
+}
+
+.rydo-forgot-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Demo Section */
+.rydo-auth-demo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.rydo-auth-demo-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.rydo-quick-access-pills {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.rydo-quick-pill {
+  padding: 0.25rem 0.6rem;
+  background: var(--color-surface-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rydo-quick-pill:hover {
+  background: var(--color-surface-container);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Footer */
+.rydo-auth-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.125rem;
+}
+
+.rydo-auth-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.rydo-auth-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Responsive - Tablet & Mobile */
+@media (max-width: 640px) {
+  .rydo-auth-page {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .rydo-auth-card {
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 1.5rem 0.25rem;
+    background: transparent;
+  }
+
+  .rydo-auth-brand-block {
+    margin-bottom: 0.5rem;
+  }
+
+  .rydo-auth-title {
+    font-size: 1.375rem;
+  }
+
+  .rydo-auth-meta-row {
+    flex-direction: row;
+  }
+
+  .rydo-auth-demo-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rydo-quick-access-pills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .rydo-quick-pill {
+    text-align: center;
+    padding: 0.4rem;
+  }
+}
